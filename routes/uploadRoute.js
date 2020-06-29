@@ -8,8 +8,7 @@ var app = express();
 
 
 var User = require('../models/user');
-var Publication = require('../models/publication');
-var Notification = require('../models/notification');
+
 
 app.use( fileUpload());
 

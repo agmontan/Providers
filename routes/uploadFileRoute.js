@@ -6,8 +6,7 @@ var fs = require('fs');
 
 var app = express();
 
-var Publication = require('../models/publication');
-var Notification = require('../models/notification');
+
 var Doc = require('../models/doc');
 
 app.use( fileUpload());
