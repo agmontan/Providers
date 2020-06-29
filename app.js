@@ -46,7 +46,7 @@ var fileRoutes = require('./routes/fileRoute');
 
 //conexion a la base de datos
 mongoose.set('useCreateIndex', true);
-mongoose.connection.openUri('mongodb://localhost:27017/ende', { useNewUrlParser: true,  useUnifiedTopology: true }, (err, res) => {
+mongoose.connection.openUri('mongodb://localhost:27017/provider', { useNewUrlParser: true,  useUnifiedTopology: true }, (err, res) => {
     if(err) throw err;
     console.log('Base de datos mongo: \x1b[32m%s\x1b[0m','online');
 });
@@ -56,10 +56,6 @@ mongoose.connection.openUri('mongodb://localhost:27017/ende', { useNewUrlParser:
 // Rutas
 app.use('/user', userRoutes);
 app.use('/login', loginRoutes);
-app.use('/publication', publicationRoutes);
-app.use('/notification', notificationRoutes);
-app.use('/category', categoryRoutes);
-app.use('/convocatory',convocatoriesRoutes);
 app.use('/provider',providersRoutes);
 app.use('/location',locationRoutes);
 app.use('/doc', docRoutes);
