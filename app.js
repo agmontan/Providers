@@ -58,7 +58,7 @@ app.use('/upload', uploadRoutes);
 app.use('/image', imageRoutes);
 app.use('/uploadfile', uploadFileRoutes);
 app.use('/file', fileRoutes);
-app.use('/', appRoutes);
+
 
 app.use('/', express.static('client', {redirect: false}));
 app.get('*', function(req, res, next) {
