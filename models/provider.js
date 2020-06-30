@@ -15,6 +15,11 @@ var providerSchema = new Schema({
     pagina_web: { type: String},
     pais: { type: String, required: [true, 'El pais es necesario'] },
     img: { type: String, required: false },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: [true, 'El id usuario es un campo obligatorio ']
+    }
     
 });
 

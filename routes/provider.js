@@ -56,8 +56,8 @@ app.get('/:id', (req, res) => {
         if(!provider){
            return res.status(400).json({
                 ok: false,
-                mensaje: 'El adquisicion con el id ' + id + ' no existe',
-                errors: { message: 'No existe un acquisition con ese ID' }
+                mensaje: 'El proveedor con el id ' + id + ' no existe',
+                errors: { message: 'No existe un proveedor con ese ID' }
             }); 
         }
         res.status(200).json({
@@ -107,6 +107,7 @@ app.put('/:id', (req, res) => {
         provider.nit = body.nit;
         provider.pagina_web = body.pagina_web;
         provider.pais=body.pais;
+        provider.user = body.user;
 
        
 
@@ -152,6 +153,7 @@ app.post('/',  (req, res) => {
         nit: body.nit,
         pagina_web: body.pagina_web,
         pais: body.pais,
+        user: body.user
 
         
     });

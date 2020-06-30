@@ -65,6 +65,7 @@ app.put('/:id', (req, res) => {
 
         
         doc.titulo = body.titulo;
+        doc.descripcion = body.descripcion;
         doc.provider = body.provider;
         doc.sfile = body.sfile;
         
@@ -100,6 +101,7 @@ app.post('/', (req, res) => {
 
     var doc = new Doc({
         titulo: body.titulo,
+        descripcion: body.descripcion,
         provider: body.provider
         
     });
